@@ -27,7 +27,7 @@ app.use(express.static(process.cwd()));
 
 // 3. PAGE ROUTES
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "ui/statusTemplate.html"));
+  res.sendFile(path.join(process.cwd(), "src/ui/statusTemplate.html"));
 });
 
 // 4. API ROUTES
