@@ -24,7 +24,7 @@ app.use(express.static(process.cwd()));
 
 // 3. PAGE ROUTES
 app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "src/ui/statusTemplate.html"));
+  res.status(200).send("<h1>Vaultage API is running</h1>");
 });
 
 // 4. API ROUTES
