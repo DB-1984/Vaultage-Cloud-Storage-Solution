@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
 import cookieParser from "cookie-parser";
 
 // Routes
@@ -25,9 +26,21 @@ app.use(cookieParser());
 // 2. STATIC SERVING
 app.use(express.static(process.cwd()));
 
+// Read HTML template into memory at startup to bypass SiteGround path resolution failures
+const indexPath = path.join(__dirname, "ui/statusTemplate.html");
+let indexHtml = "<h1>Vaultage API is running</h1>";
+
+try {
+  if (fs.existsSync(indexPath)) {
+    indexHtml = fs.readFileSync(indexPath, "utf8");
+  }
+} catch (err) {
+  console.error("Could not load status template:", err);
+}
+
 // 3. PAGE ROUTES
 app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "src/ui/statusTemplate.html"));
+  res.status(200).type("html").send(indexHtml);
 });
 
 // 4. API ROUTES
