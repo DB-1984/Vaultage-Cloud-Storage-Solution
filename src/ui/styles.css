@@ -66,3 +66,9 @@ pre {
     border-radius: 10px;
   }
 }
+
+button#login-btn {
+    background: #fafaf6;
+    color: #5b5050;
+    border: 2px solid currentColor;
+}
