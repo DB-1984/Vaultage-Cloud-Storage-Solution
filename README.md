@@ -1,4 +1,3 @@
-
 # Vaultage — File Storage API
 
 **A backend-focused file storage application built with Node.js, Express, PostgreSQL and Prisma, exploring authentication, file uploads and access-controlled storage.**
@@ -9,9 +8,9 @@ The application provides the foundations for uploading and managing files, organ
 
 Rather than attempting to reproduce a complete cloud storage platform, Vaultage concentrates on the API, database relationships, file handling and authentication needed to support one.
 
-**[Try the Live App](https://vaultage.onrender.com/)**
+**[Try the Live App](https://vaultage.davidbrandondev.com/)**
 
-*The application is hosted on Render, with Supabase providing the database and file storage. Services may take a little time to become available after inactivity.*
+*Supabase provides the database and file storage. The database may be paused after inactivity, temporarily preventing access.*
 
 ---
 
@@ -202,7 +201,7 @@ Alongside my frontend and full-stack applications, Vaultage demonstrates an inte
 
 ## Links
 
-- **Live Application:** https://vaultage.onrender.com/
+- **Live Application:** https://vaultage.davidbrandondev.com/
 - **Video Demonstration:** https://www.youtube.com/watch?v=FJbYa4EyLdw
-- **Developer Portfolio:** https://david-brandon.onrender.com/
+- **Developer Portfolio:** https://davidbrandondev.com/
 - **GitHub Profile:** https://github.com/DB-1984
